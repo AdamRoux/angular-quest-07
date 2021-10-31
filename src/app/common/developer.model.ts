@@ -6,9 +6,9 @@ export class Developer {
     public age : number;
     public sexe : string;
     public bio : string;
-    public skills: Skill;
+    public skills: Skill[];
 
-    constructor(lastName : string, firstName : string, age : number, sexe: string, bio:string, skills: Skill){
+    constructor(lastName : string, firstName : string, age : number, sexe: string, bio:string, skills: Skill[]){
         this.lastName = lastName;
         this.firstName = firstName;
         this.age = age;

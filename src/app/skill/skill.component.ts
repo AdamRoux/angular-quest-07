@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Skill } from '../common/skill.model';
 
 @Component({
@@ -8,15 +8,14 @@ import { Skill } from '../common/skill.model';
 })
 export class SkillComponent implements OnInit {
 
- skills: Skill[]
+  @Input() public skill : Skill | undefined
 
-  constructor(skills: Skill[]){this.skills= skills }
+ 
+
+  constructor(){}
 
   ngOnInit(): void {
-      this.skills  = [
-      new Skill('Angular', "https://fakeimg.pl/350x200/?text=Angular",'https://angular.io'),
-      new Skill('JavaScript',"https://fakeimg.pl/350x200/?text=Javascript",'https://www.javascript.com/')
-    ]
+      
 
   }
 
